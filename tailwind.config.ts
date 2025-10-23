@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "tab-indicator": "hsl(var(--tab-indicator))",
+        "avatar-gray": {
+          DEFAULT: "hsl(var(--avatar-gray-bg))",
+          foreground: "hsl(var(--avatar-gray-fg))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

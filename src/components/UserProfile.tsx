@@ -11,8 +11,16 @@ const UserProfile = () => {
   return (
     <div className="container mx-auto px-6 py-8 max-w-5xl">
       <div className="flex items-start gap-8 mb-8">
-        <div className="w-32 h-32 rounded-full bg-[hsl(var(--avatar-bg))] flex items-center justify-center flex-shrink-0">
-          <UserCircle2 className="w-16 h-16 text-[hsl(var(--avatar-fg))]" />
+        <div className={`w-32 h-32 rounded-full flex items-center justify-center flex-shrink-0 ${
+          activeTab === "experience" 
+            ? "bg-avatar-gray" 
+            : "bg-[hsl(var(--avatar-bg))]"
+        }`}>
+          <UserCircle2 className={`w-16 h-16 ${
+            activeTab === "experience"
+              ? "text-avatar-gray-foreground"
+              : "text-[hsl(var(--avatar-fg))]"
+          }`} />
         </div>
 
         <div className="flex-1">
@@ -31,21 +39,30 @@ const UserProfile = () => {
         <TabsList className="w-full justify-start bg-transparent border-b border-border rounded-none h-auto p-0 mb-8">
           <TabsTrigger
             value="basic"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary px-4 py-3"
+            className="relative rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary px-4 py-3"
           >
             Basic Info
+            {activeTab === "basic" && (
+              <span className="absolute top-0 right-2 w-2 h-2 rounded-full bg-[hsl(var(--tab-indicator))]" />
+            )}
           </TabsTrigger>
           <TabsTrigger
             value="education"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary px-4 py-3"
+            className="relative rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary px-4 py-3"
           >
             Education & skills
+            {activeTab === "education" && (
+              <span className="absolute top-0 right-2 w-2 h-2 rounded-full bg-[hsl(var(--tab-indicator))]" />
+            )}
           </TabsTrigger>
           <TabsTrigger
             value="experience"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary px-4 py-3"
+            className="relative rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary px-4 py-3"
           >
             Experience
+            {activeTab === "experience" && (
+              <span className="absolute top-0 right-2 w-2 h-2 rounded-full bg-[hsl(var(--tab-indicator))]" />
+            )}
           </TabsTrigger>
         </TabsList>
 

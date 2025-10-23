@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 250 40% 97%;
     --foreground: 240 10% 10%;
 
     --card: 0 0% 100%;
@@ -40,6 +40,10 @@ All colors MUST be HSL.
 
     --avatar-bg: 243 75% 95%;
     --avatar-fg: 243 75% 59%;
+    --avatar-gray-bg: 220 10% 60%;
+    --avatar-gray-fg: 0 0% 100%;
+    
+    --tab-indicator: 15 90% 65%;
   }
 
   .dark {
