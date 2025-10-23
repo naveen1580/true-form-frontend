@@ -1,13 +1,13 @@
 import Header from "@/components/Header";
-import UsersList from "@/components/UsersList";
+import UserProfile from "@/components/UserProfile";
 
-const Index = () => {
+const UserProfilePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <UsersList />
+      <UserProfile />
     </div>
   );
 };
 
-export default Index;
+export default UserProfilePage;
