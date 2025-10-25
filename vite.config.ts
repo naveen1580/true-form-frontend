@@ -1,12 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
+import tsconfigPaths from "vite-tsconfig-paths"
 
-// ✅ Set base path to your repository name for GitHub Pages
 export default defineConfig({
-  base: '/true-form-frontend/',
+  base: "/true-form-frontend/",  // ✅ this is required
   plugins: [react(), tsconfigPaths()],
   build: {
-    outDir: 'dist',
+    outDir: "dist",
   },
 })
